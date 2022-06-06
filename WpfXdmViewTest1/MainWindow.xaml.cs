@@ -26,9 +26,9 @@ namespace WpfXdmViewTest1
         {
             InitializeComponent();
 
-            var values = new string[] { "foo", "bar", "baz" };
+            //var values = new string[] { "foo", "bar", "baz" };
 
-            //var values = new XdmItem[] { new XdmAtomicValue("foo"), new XdmAtomicValue(3) };
+            var values = new XdmItem[] { new XdmAtomicValue("foo"), new XdmAtomicValue(3), new XdmAtomicValue(true) };
 
             //var xqueryCompiler = processor.NewXQueryCompiler();
             //xqueryCompiler.BaseUri = new Uri("urn:from-string");
