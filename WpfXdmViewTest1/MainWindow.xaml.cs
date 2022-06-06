@@ -28,16 +28,16 @@ namespace WpfXdmViewTest1
 
             //var values = new string[] { "foo", "bar", "baz" };
 
-            var values = new XdmItem[] { new XdmAtomicValue("foo"), new XdmAtomicValue(3), new XdmAtomicValue(true) };
+            //var values = new XdmItem[] { new XdmAtomicValue("foo"), new XdmAtomicValue(3), new XdmAtomicValue(true) };
 
-            //var xqueryCompiler = processor.NewXQueryCompiler();
-            //xqueryCompiler.BaseUri = new Uri("urn:from-string");
-            //var xqueryExecutable = xqueryCompiler.Compile("(1 to 5) ! <item>Item {.}</item>");
-            //var xqueryEvaluator = xqueryExecutable.Load();
+            var xqueryCompiler = processor.NewXQueryCompiler();
+            xqueryCompiler.BaseUri = new Uri("urn:from-string");
+            var xqueryExecutable = xqueryCompiler.Compile("(1 to 5) ! <item>Item {.}</item>");
+            var xqueryEvaluator = xqueryExecutable.Load();
 
-            //var xdmValue = xqueryEvaluator.Evaluate();
+            var xdmValue = xqueryEvaluator.Evaluate();
 
-            XdmView.ItemsSource = values;
+            XdmView.ItemsSource = xdmValue;
         }
     }
 }
